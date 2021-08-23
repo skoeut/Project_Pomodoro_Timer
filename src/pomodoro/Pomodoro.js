@@ -68,7 +68,7 @@ function Pomodoro() {
    *
    * NOTE: You will not need to make changes to the callback function
    */
-console.log(session?.label)
+
   useInterval(() => {
       if (session.timeRemaining === 0) {
         new Audio("https://bigsoundbank.com/UPLOAD/mp3/1482.mp3").play();

@@ -3,9 +3,9 @@ import React from 'react'
 import { secondsToDuration, minutesToDuration } from "../utils/duration";
 
 function ProgressBar({session, focusDuration, breakDuration, isTimeRunning}) {
+    
 
-  const start = session?.label === "Focusing" ? focusDuration * 60 : breakDuration * 60;
-  const percentage = 100 * (1 -session?.timeRemaining / start);
+  const percentage = 100 * (1 -session?.timeRemaining / (session?.label === "Focusing" ? focusDuration * 60 : breakDuration * 60));
   
     return (
      session &&
